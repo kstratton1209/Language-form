@@ -49,28 +49,25 @@
 	</table>
 	
 	
-	<form:form action="/create" method="post" modelAttribute="languages">	    
 	
-	    <p>
-		    <form:label path="name">Name</form:label>
-	        <form:errors path="name"/>
-	        <form:input path="name"/>
-	    </p>
-	    
-	    <p>
-		    <form:label path="creator">Creator</form:label>
-	        <form:errors path="creator"/>
-	        <form:input path="creator"/>
-	    </p>
-	    <p>
-	     	<form:label path="currentVersion">Current version</form:label>
-	        <form:errors path="currentVersion"/>
-	        <form:input path="currentVersion"/>
-	    <p></p>
- 		<button class="btn btn-primary">Submit</button>
-    	</p>
-	</form:form> 
-	
+	           <form:form action="/create" method="post" modelAttribute="language">
+                    <div class="form-group">
+                        <label>Name:</label>
+                        <form:input path="name" class="form-control" />
+                        <form:errors path="name" class="text-danger" />
+                    </div>
+                    <div class="form-group">
+                        <label>Creator:</label>
+                        <form:input path="creator" class="form-control" />
+                        <form:errors path="creator" class="text-danger" />
+                    </div>
+                    <div class="form-group">
+                        <label>Current version:</label>
+                        <form:input  path="currentVersion" class="form-control" />
+                        <form:errors path="currentVersion" class="text-danger" />
+                    </div>
+                    <input type="submit" value="Add Language" class="btn btn-primary" />
+                </form:form>    
 	
 	
 	
